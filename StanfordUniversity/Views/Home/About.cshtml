@@ -1,0 +1,24 @@
+﻿@model IEnumerable<StanfordUniversity.Models.SchoolViewModels.DateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>Group name</th>
+        <td></td>
+        <th>Students</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.NameGroup)</td>
+            <td></td>
+            <td>@item.StudentCount</td>
+        </tr>
+    }
+</table>
